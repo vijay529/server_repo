@@ -11,7 +11,7 @@ const mongodb = process.env.MONGO
 
 const connect = async()=>{
     try {
-        await mongoose.connect('mongodb+srv://vijaychoudhary6017:EK8ePTUke0us0gcE@cluster0.gdzyo1b.mongodb.net/memes');
+        await mongoose.connect(`${mongodb}`);
         console.log('db connected');
     } catch (error) {
         console.log('error in connecting to db');
