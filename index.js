@@ -7,14 +7,13 @@ import dotenv from 'dotenv'
 const app = express();
 dotenv.config();
 
-const mongodb = process.env.MONGO
-
 const connect = async()=>{
     try {
-        await mongoose.connect(`${mongodb}`);
+        await mongoose.connect(process.env.MONGO);
         console.log('db connected');
     } catch (error) {
         console.log('error in connecting to db');
+        console.log(mongodb)
     }
 }
 
