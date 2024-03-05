@@ -16,11 +16,13 @@ const VidSchema = new mongoose.Schema({
     vidUrl: { 
         type: String, 
         required: true 
-    },      
-    thumbnail: { 
-        type: String, 
-        required: true 
-    }
+    },
+    desc:{
+        type:String
+    },
+    tags:[{
+        type:String
+    }]
 },{collection:'videos'})
 
 export default mongoose.model('Meme', VidSchema);
